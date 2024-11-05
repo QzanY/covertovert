@@ -4,5 +4,6 @@ sys.path.append("/usr/local/lib/python3.10/dist-packages")
 
 from scapy.all import *
 
+
 packet = Ether()/IP(dst="receiver", src="sender", ttl=1)/ICMP()
 sendp(packet)
