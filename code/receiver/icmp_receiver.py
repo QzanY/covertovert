@@ -9,5 +9,5 @@ from scapy.all import sniff
 def check_and_show(x):
     if x.ttl ==1:
         x.show()
-
+ 
 sniff(filter="icmp  and icmp[icmptype] == icmp-echo", prn=check_and_show)
